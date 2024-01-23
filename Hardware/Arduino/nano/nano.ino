@@ -29,7 +29,7 @@ void loop(void) {
     OUT_V[i] = map(FSR_V[i], 0, 1023, 0, 255);
     BTserial.write(OUT_V[i]);
     if (OUT_V[i] >= threshold && !BUZ_ON) {
-      tone(BUZ_P, 1000);
+      tone(BUZ_P, 2000);
       BUZ_ON = true;
     }
   }
